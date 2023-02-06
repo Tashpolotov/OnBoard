@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OnBoard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_stazam">Welcome To Stazam</string>
+    <string name="easily_organise_your_day_to_day_activities_for_maximum_productivity">Easily Organise your day to day activities for Maximum productivity</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+    <string name="helloooo">Helloooo</string>
+</resources>
