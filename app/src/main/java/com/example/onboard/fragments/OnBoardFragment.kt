@@ -9,13 +9,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentTransaction
-import com.example.m5_lesson5.utils.A
+import com.example.m5_lesson5.utils.Preferences
 import com.example.onboard.R
 import com.example.onboard.databinding.FragmentOnBoardBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class OnBoardFragment : Fragment() {
 
     private lateinit var binding: FragmentOnBoardBinding
+    @Inject
+    lateinit var preferences: Preferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,7 +56,7 @@ class OnBoardFragment : Fragment() {
             val fragmentManager =
                 fragmentManager
             fragmentManager!!.beginTransaction().replace(R.id.frame_container, newFragment).commit()
-            A.providePrefs(requireContext()).setBoardingShowed(true)
+            preferences.setBoardingShowed(true)
         }
     }
 
